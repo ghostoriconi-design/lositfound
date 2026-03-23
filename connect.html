@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEONG JOEUN | CONNECT</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* Connect 페이지 전용 추가 스타일 */
+        .contact-form {
+            max-width: 700px;
+            margin: 4rem auto;
+            text-align: left;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--main-sage); font-weight: 700; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid var(--stitch-color);
+            border-radius: 10px;
+            font-family: inherit;
+            color: var(--dark-sage);
+        }
+        .form-group textarea { height: 150px; resize: none; }
+        .submit-btn {
+            background-color: var(--main-sage);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background-color: var(--dark-sage); }
+        
+        .social-links {
+            margin-top: 3rem;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .social-links a {
+            color: var(--dark-sage);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--dark-sage);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">JOEUN.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Work</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="connect.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 style="font-size: 4vw; font-weight: 300;">Get in Touch</h1>
+        <div class="stitch-line"></div>
+
+        <form class="contact-form" action="https://formspree.io/f/jjchoeun@naver.com" method="POST">
+            <div class="form-group">
+                <label>NAME</label>
+                <input type="text" name="name" placeholder="성함 또는 기업명을 입력해주세요" required>
+            </div>
+            <div class="form-group">
+                <label>EMAIL</label>
+                <input type="email" name="_replyto" placeholder="답변받으실 이메일 주소를 입력해주세요" required>
+            </div>
+            <div class="form-group">
+                <label>MESSAGE</label>
+                <textarea name="message" placeholder="프로젝트 제안이나 문의 내용을 적어주세요"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">SEND MESSAGE</button>
+        </form>
+
+        <div class="social-links">
+            <a href="mailto:jjchoeun@naver.com">EMAIL</a>
+            <a href="https://instagram.com/여기에_아이디" target="_blank">INSTAGRAM</a>
+        </div>
+        
+        <div class="stitch-line"></div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
