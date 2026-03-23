@@ -6,53 +6,57 @@
     <title>HOME | PORTFOLIO</title>
     <link rel="stylesheet" href="CSS/style.css">
     <style>
-        /* 메인 섹션 전용 레이아웃 및 모션 스타일 */
         .hero-content {
             display: flex;
-            justify-content: flex-start; /* 왼쪽 기준으로 정렬 */
-            align-items: flex-end; /* 하단 기준 정렬 */
-            gap: 2.5rem; /* 이미지와 텍스트 사이 간격 축소 */
+            justify-content: flex-start;
+            align-items: flex-end;
+            gap: 2.5rem;
             margin: 4rem 0;
         }
 
         .hero-text-side {
             flex: 1;
-            padding-bottom: 2rem; /* 이미지와 높이 밸런스 조정 */
+            padding-bottom: 2rem;
         }
 
         .main-slogan {
-            font-size: 3rem; /* 크기 축소 */
+            font-size: 3rem;
             font-weight: 300;
             line-height: 1.2;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem; /* 간격 살짝 축소 */
             color: var(--dark-sage);
         }
 
-        .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--sub-text);
+        /* 신규 추가: 구체적인 자기소개 스타일 */
+        .personal-intro {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--main-sage);
+            margin-bottom: 2rem;
+            line-height: 1.5;
             word-break: keep-all;
         }
 
-        /* 이미지 컨테이너: 왼쪽으로 이동 및 너비 조정 */
-        .main-visual-side {
-            flex: 0 0 350px; /* 이미지 너비 약간 축소 */
-            margin-left: -1rem; /* 왼쪽으로 미세하게 더 이동 */
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--sub-text);
+            word-break: keep-all;
+            opacity: 0.8;
         }
 
-        /* 이미지 모달 및 애니메이션 스타일 */
+        .main-visual-side {
+            flex: 0 0 350px;
+            margin-left: -1rem;
+        }
+
         .visual-container {
             width: 100%;
             aspect-ratio: 9 / 16;
             border-radius: 40px;
             overflow: hidden;
             background-color: var(--white);
-            
-            /* 초기 그림자 설정: 은은하게 */
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            
-            /* 부드러운 전환 효과 설정 */
             transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
         }
 
@@ -60,26 +64,18 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            
-            /* 이미지 자체에도 부드러운 전환 효과 추가 */
             transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        /* 커서를 올렸을 때 (Hover) 모션 효과 */
         .main-visual-side:hover .visual-container {
-            /* 위로 살짝 떠오르는 효과 */
             transform: translateY(-15px);
-            
-            /* 세이지 그린 톤의 그림자 강화 */
             box-shadow: 0 25px 50px rgba(138, 154, 91, 0.15);
         }
 
         .main-visual-side:hover .visual-container img {
-            /* 이미지 자체가 미세하게 확대되는 효과 */
             transform: scale(1.03);
         }
 
-        /* 모바일 대응 */
         @media (max-width: 900px) {
             .hero-content {
                 flex-direction: column;
@@ -90,15 +86,6 @@
             .hero-text-side { padding-bottom: 0; }
             .main-visual-side { flex: 0 0 auto; width: 100%; max-width: 320px; margin-left: 0; }
             .main-slogan { font-size: 2.2rem; }
-            
-            /* 모바일에서는 호버 효과 제외 (터치 디바이스 고려) */
-            .main-visual-side:hover .visual-container {
-                transform: none;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            }
-            .main-visual-side:hover .visual-container img {
-                transform: none;
-            }
         }
     </style>
 </head>
@@ -135,9 +122,15 @@
                     Exploring the world with <b>AI</b>,<br>
                     Creating <b>Digital Heritage</b>.
                 </h1>
+
+                <p class="personal-intro">
+                    영상 콘텐츠 크리에이터, 생성형 AI를 결합해서 <br>
+                    속도감 있게 콘텐츠를 만듭니다.
+                </p>
+
                 <p class="intro-text">
-                    최신 AI 기술을 도구 삼아 상상을 현실로 바꿉니다. 🌿<br>
-                    빠른 템포와 감각적인 비주얼을 통해 새로운 가치를 제안합니다.
+                    AI를 활용해 디자인한 캐릭터를 활용한 숏폼 영상을 주로 기획하고 제작합니다. <br>
+                    최신 AI 기술을 도구 삼아 상상을 현실로 바꿉니다. 🌿
                 </p>
             </div>
 
